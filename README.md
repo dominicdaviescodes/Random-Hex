@@ -27,18 +27,25 @@ color = Math.random().toString(16).substring(2, 8);
 // 0.995d15ab342e gives us 995d15
 ```
 
-<!-- ### Adding # to the hex number -->
+### the generateColor function will do a couple of things.
+
+* generate randomColor
+* we will change the background color of the body by setting backgroundColor to "#" + randomColor;
+* update the hex value shown in the UI by setting the innerHTML to "#" + randomColor
+
 
 ```js
+const hex = document.querySelector(".hex")
+const btn = document.querySelector(".generate")
 
-```
+const generateColor = () => {
+  const randomColor = Math.random().toString(16).substring(2, 8)
+  document.body.style.backgroundColor = "#" + randomColor
+  hex.innerHTML = "#" + randomColor
+}
 
-```js
+btn.addEventListener("click", generateColor)
 
-```
-```js
-
-```
-```js
-
+// on page load
+generateColor()
 ```
